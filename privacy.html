@@ -1,73 +1,111 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StepUp Privacy Policy</title>
+    <title>StepUp | Privacy Policy</title>
     <style>
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        background-color: #f9fafb;
-        color: #111827;
-        padding: 2rem;
-        max-width: 900px;
-        margin: auto;
+      :root {
+        --primary: #3b82f6;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --bg: #f9fafb;
+        --card: #ffffff;
       }
 
-      h1,
-      h2 {
-        color: #2563eb;
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 850px;
+        background: var(--card);
+        margin: 3rem auto;
+        padding: 3rem 2rem;
+        border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       }
 
       h1 {
+        color: var(--primary);
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.25rem;
       }
 
-      p,
-      li {
-        margin-bottom: 1rem;
+      p.updated {
+        text-align: center;
+        color: var(--muted);
+        margin-bottom: 2.5rem;
+        font-size: 0.95rem;
+      }
+
+      h2 {
+        color: #1f2937;
+        margin-top: 2rem;
+        font-size: 1.3rem;
+        border-left: 4px solid var(--primary);
+        padding-left: 0.6rem;
+      }
+
+      h3 {
+        color: #2563eb;
+        margin-top: 1.2rem;
       }
 
       ul {
-        margin-left: 1.5rem;
+        margin-left: 1.4rem;
+        list-style-type: disc;
       }
 
-      footer {
-        margin-top: 3rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #6b7280;
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
       }
 
-      .section {
-        margin-bottom: 2rem;
+      a:hover {
+        text-decoration: underline;
       }
 
       code {
         background: #e5e7eb;
-        padding: 2px 5px;
+        padding: 2px 6px;
         border-radius: 4px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          margin: 1.5rem;
+          padding: 2rem 1.25rem;
+        }
       }
     </style>
   </head>
 
   <body>
-    <h1>StepUp Privacy Policy</h1>
-    <p><strong>Last updated:</strong> October 2025</p>
+    <div class="container">
+      <h1>StepUp Privacy Policy</h1>
+      <p class="updated"><strong>Last updated:</strong> October 2025</p>
 
-    <div class="section">
       <p><strong>Developer:</strong> Kameron Bains</p>
-      <p><strong>App name:</strong> StepUP</p>
-    </div>
+      <p><strong>App name:</strong> StepUp</p>
 
-    <div class="section">
       <h2>1. Introduction</h2>
       <p>
-        StepUp is a mobile fitness app designed to help users track their
-        activity, set goals, and stay motivated through gamified fitness
-        features.
+        StepUp is a mobile fitness app designed to help users track activity,
+        set goals, and stay motivated through gamified fitness features.
       </p>
       <p>
         This Privacy Policy explains how StepUp collects, uses, and protects
@@ -77,86 +115,70 @@
         By using StepUp, you agree to the collection and use of information in
         accordance with this policy.
       </p>
-    </div>
 
-    <div class="section">
       <h2>2. Information We Collect</h2>
       <h3>a. Account Information</h3>
       <ul>
-        <li>Your email address, name (from Google or Apple sign-in).</li>
-        <li>Your username .</li>
-        <li>
-          Basic metadata such as your account creation date and progress stats.
-        </li>
+        <li>Email address and name (from Google or Apple sign-in)</li>
+        <li>Username</li>
+        <li>Account creation date and progress statistics</li>
       </ul>
 
       <h3>b. Fitness Data</h3>
-      <p>
-        If you connect your Google Fit or Apple Health account, we may collect:
-      </p>
+      <p>If you connect Google Fit or Apple Health, we may collect:</p>
       <ul>
         <li>Step count</li>
         <li>Active calories burned</li>
       </ul>
       <p>
-        This data is accessed only with your explicit permission and is used
-        solely to display your progress within the app.
+        This data is accessed only with your explicit permission and used solely
+        to display your progress within the app.
       </p>
 
       <h3>c. Device Information</h3>
       <ul>
         <li>Device model and OS version</li>
         <li>App version and usage statistics</li>
-        <li>
-          Crash logs and error reports (via Firebase Analytics/Crashlytics)
-        </li>
+        <li>Crash logs and error reports (via Firebase Crashlytics)</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>3. How We Use Your Information</h2>
       <ul>
-        <li>Display your fitness statistics and progress rings.</li>
-        <li>Calculate XP, levels, and in-app challenges.</li>
-        <li>Sync and back up your progress to the cloud.</li>
-        <li>Improve app functionality and performance.</li>
-        <li>
-          Send optional notifications or reminders (if you grant permission).
-        </li>
+        <li>Display fitness statistics and progress rings</li>
+        <li>Calculate XP, levels, and challenges</li>
+        <li>Sync and back up your progress to the cloud</li>
+        <li>Improve app functionality and performance</li>
+        <li>Send optional notifications (if permitted)</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>4. Data Sharing and Disclosure</h2>
       <p>
         We do not sell, rent, or share your personal data with third parties.
+        Data may be shared only in these limited cases:
       </p>
-      <p>Data may be shared only in these limited cases:</p>
       <ul>
         <li>
-          <strong>Firebase Services (Google Cloud)</strong> – for
-          authentication, analytics, and storage.
+          <strong>Firebase (Google Cloud):</strong> for authentication,
+          analytics, and data storage.
         </li>
         <li>
-          <strong>Apple Health / Google Fit APIs</strong> – only to read your
-          fitness data as authorized by you.
+          <strong>Apple Health / Google Fit APIs:</strong> only to read your
+          fitness data with permission.
         </li>
         <li>
-          <strong>Legal Requirements</strong> – if required by law or court
+          <strong>Legal requirements:</strong> if required by law or court
           order.
         </li>
       </ul>
       <p>
         Your fitness and personal data are never shared with advertisers or used
-        for marketing.
+        for marketing purposes.
       </p>
-    </div>
 
-    <div class="section">
       <h2>5. Data Storage and Security</h2>
       <p>
-        All personal data is stored securely using Firebase Authentication and
-        Cloud Firestore, protected by Google’s managed encryption.
+        All personal data is securely stored using Firebase Authentication and
+        Firestore, protected by Google’s managed encryption systems.
       </p>
       <p>
         We implement industry-standard measures to safeguard your data,
@@ -165,11 +187,9 @@
       <ul>
         <li>HTTPS encryption</li>
         <li>Secure tokens for authentication</li>
-        <li>Limited access controls for developers</li>
+        <li>Limited developer access controls</li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>6. User Control and Data Deletion</h2>
       <ul>
         <li>
@@ -177,26 +197,26 @@
           device settings.
         </li>
         <li>
-          You can request account deletion and data removal by emailing us at
+          To request account deletion or data removal, email us at
           <a href="mailto:kam2711@outlook.com">kam2711@outlook.com</a>.
         </li>
         <li>
-          Upon deletion, all associated fitness data and user records are
-          permanently erased from our servers.
+          Upon deletion, all associated fitness data and records are permanently
+          erased from our servers.
         </li>
       </ul>
-    </div>
 
-    <div class="section">
       <h2>7. Third-Party Services</h2>
-      <p>StepUp integrates with:</p>
+      <p>StepUp integrates with the following services:</p>
       <ul>
         <li>
           <a href="https://www.google.com/fit/" target="_blank">Google Fit</a>
         </li>
         <li>Apple HealthKit</li>
         <li>
-          <a href="https://firebase.google.com/support/privacy" target="_blank"
+          <a
+            href="https://firebase.google.com/support/privacy"
+            target="_blank"
             >Firebase Authentication & Firestore</a
           >
         </li>
@@ -205,38 +225,33 @@
         These services may collect information independently under their own
         privacy policies.
       </p>
-    </div>
 
-    <div class="section">
       <h2>8. Children’s Privacy</h2>
       <p>
         StepUp is intended for users aged 18 and older. We do not knowingly
-        collect personal data from minors. If you believe a child under 18 has
-        created an account, please contact us for immediate deletion.
+        collect data from minors. If a child under 18 has created an account,
+        please contact us for immediate deletion.
       </p>
-    </div>
 
-    <div class="section">
       <h2>9. Changes to This Policy</h2>
       <p>
-        We may update this Privacy Policy occasionally. Any significant changes
-        will be posted within the app or on our website. Your continued use of
-        StepUp after updates indicates acceptance of the new terms.
+        We may update this Privacy Policy occasionally. Any major updates will
+        be posted within the app or on our website. Continued use after changes
+        means acceptance of the new terms.
       </p>
-    </div>
 
-    <div class="section">
       <h2>10. Contact Us</h2>
       <p>
-        If you have questions or requests regarding this Privacy Policy, please
-        contact:
+        If you have any questions regarding this Privacy Policy, please contact:
       </p>
       <p>
         <strong>Kameron Bains</strong><br />
         Email: <a href="mailto:kam2711@outlook.com">kam2711@outlook.com</a>
       </p>
-    </div>
 
-    <footer>&copy; 2025 StepUP by Kameron Bains. All rights reserved.</footer>
+      <footer>
+        © 2025 StepUp by Kameron Bains — All rights reserved.
+      </footer>
+    </div>
   </body>
 </html>
