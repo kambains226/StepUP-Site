@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StepUp | Track. Level Up. Stay Motivated.</title>
+    <title>StepUP | Track. Level Up. Stay Motivated.</title>
     <style>
       :root {
-        --primary: #3b82f6;
-        --accent: #2563eb;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --bg: #f9fafb;
-        --card: #ffffff;
+        --bg: #0f172a; /* slate-900 */
+        --card: #1e293b; /* slate-800 */
+        --border: #334155; /* slate-700 */
+        --text: #e2e8f0; /* slate-200 */
+        --muted: #94a3b8; /* slate-400 */
+        --primary: #6366f1; /* indigo-500 */
+        --accent: #818cf8; /* indigo-400 */
+        --green: #22c55e; /* green-500 */
       }
 
       body {
         font-family: "Inter", Arial, sans-serif;
-        background-color: var(--bg);
+        background: var(--bg);
         color: var(--text);
         margin: 0;
         padding: 0;
@@ -25,7 +27,7 @@
 
       header {
         background: var(--card);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid var(--border);
         padding: 1.2rem 2rem;
         display: flex;
         justify-content: space-between;
@@ -33,88 +35,105 @@
       }
 
       .logo {
-        font-weight: 700;
-        font-size: 1.5rem;
-        color: var(--accent);
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: var(--primary);
+        letter-spacing: -0.5px;
       }
 
       nav a {
-        color: var(--text);
+        color: var(--muted);
         margin-left: 1.5rem;
         text-decoration: none;
         font-weight: 500;
-        transition: color 0.2s ease;
+        transition: color 0.3s ease;
       }
 
       nav a:hover {
-        color: var(--primary);
+        color: var(--accent);
       }
 
       .hero {
         text-align: center;
-        padding: 5rem 2rem;
-        background: linear-gradient(
-          180deg,
-          #eff6ff 0%,
-          #ffffff 100%
+        padding: 6rem 2rem;
+        background: radial-gradient(
+          circle at center,
+          rgba(99, 102, 241, 0.1),
+          transparent 70%
         );
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        font-weight: 800;
         color: var(--accent);
-        margin-bottom: 1rem;
+        text-shadow: 0 0 18px rgba(99, 102, 241, 0.5);
+        margin-bottom: 1.2rem;
       }
 
       .hero p {
         font-size: 1.1rem;
         color: var(--muted);
-        max-width: 600px;
+        max-width: 620px;
         margin: 0 auto 2rem;
       }
 
-      .hero .cta {
+      .cta {
         background: var(--primary);
         color: #fff;
         padding: 0.9rem 1.8rem;
         border: none;
-        border-radius: 8px;
+        border-radius: 12px;
         font-size: 1rem;
         cursor: pointer;
         font-weight: 600;
-        transition: background 0.3s ease;
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+        transition: all 0.3s ease;
       }
 
-      .hero .cta:hover {
+      .cta:hover {
         background: var(--accent);
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.6);
       }
 
       .features {
         max-width: 850px;
         margin: 4rem auto;
         background: var(--card);
-        border-radius: 14px;
+        border-radius: 16px;
         padding: 3rem 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--border);
+        box-shadow: 0 0 30px rgba(99, 102, 241, 0.1);
       }
 
       .features h2 {
         text-align: center;
         color: var(--accent);
-        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
       }
 
       .feature {
-        margin-bottom: 2rem;
+        margin-bottom: 2.2rem;
+        border-left: 4px solid var(--primary);
+        padding-left: 1rem;
       }
 
       .feature h3 {
         color: var(--primary);
         margin-bottom: 0.5rem;
+        font-weight: 700;
       }
 
       .feature p {
         color: var(--text);
+        font-size: 1rem;
+      }
+
+      .feature-emoji {
+        font-size: 1.4rem;
+        margin-right: 0.5rem;
       }
 
       footer {
@@ -122,11 +141,11 @@
         padding: 2rem 1rem;
         color: var(--muted);
         background: var(--card);
-        border-top: 1px solid #e5e7eb;
+        border-top: 1px solid var(--border);
       }
 
       footer a {
-        color: var(--primary);
+        color: var(--accent);
         text-decoration: none;
       }
 
@@ -136,7 +155,7 @@
 
       @media (max-width: 600px) {
         .hero h1 {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
         nav a {
           margin-left: 1rem;
@@ -147,7 +166,7 @@
 
   <body>
     <header>
-      <div class="logo">StepUp</div>
+      <div class="logo">StepUP</div>
       <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
@@ -157,52 +176,59 @@
     <section class="hero">
       <h1>Track. Level Up. Stay Motivated.</h1>
       <p>
-        StepUp turns your daily movement into an adventure — track steps, earn
-        XP, complete challenges, and stay motivated with your friends.
+        StepUP turns your movement into motivation — track steps, earn XP, and
+        complete daily challenges. Every step gets you closer to your next level.
       </p>
-      <a href="#features"><button class="cta">Learn More</button></a>
+      <a href="#features"><button class="cta">Start Your Journey 🚀</button></a>
     </section>
 
     <section id="features" class="features">
-      <h2>Why StepUp?</h2>
+      <h2>💪 Level Up Your Fitness Journey</h2>
 
       <div class="feature">
-        <h3>🏃 Real-Time Activity Tracking</h3>
+        <h3><span class="feature-emoji">🏃‍♂️</span> Real-Time Tracking</h3>
         <p>
-          Sync with Google Fit or Apple Health to automatically track your steps
-          and calories — no manual entry required.
+          Sync automatically with Google Fit or Apple Health to track your steps,
+          calories, and active minutes — no manual input needed.
         </p>
       </div>
 
       <div class="feature">
-        <h3>🎮 Gamified Progress</h3>
+        <h3><span class="feature-emoji">🎮</span> Gamified Progress</h3>
         <p>
-          Earn XP, level up, and unlock badges as you crush your daily fitness
-          goals. Fitness meets fun.
+          Earn XP, level up, and unlock new badges as you conquer your daily
+          fitness goals. It’s fitness, but fun.
         </p>
       </div>
 
       <div class="feature">
-        <h3>👥 Community & Challenges</h3>
+        <h3><span class="feature-emoji">🔥</span> Daily Challenges</h3>
         <p>
-          Compete with friends or join team challenges to stay active together
-          and push each other to the top of the leaderboard.
+          Keep your motivation high with daily and weekly challenges. Beat your
+          streaks and share your wins.
         </p>
       </div>
 
       <div class="feature">
-        <h3>🔒 Data Privacy</h3>
+        <h3><span class="feature-emoji">👥</span> Social Motivation</h3>
         <p>
-          Your health data stays private and secure — we never share or sell
-          your information. Learn more in our
-          <a href="privacy.html">Privacy Policy</a>.
+          Compete with friends, join group challenges, and climb the leaderboard.
+          Stay accountable — together.
+        </p>
+      </div>
+
+      <div class="feature">
+        <h3><span class="feature-emoji">🔒</span> Data Privacy</h3>
+        <p>
+          Your data is secure and private. We never sell or share your information.
+          Learn more in our <a href="privacy.html">Privacy Policy</a>.
         </p>
       </div>
     </section>
 
     <footer>
       <p>
-        © 2025 StepUp by Kameron Bains —
+        © 2025 StepUP by Kameron Bains —
         <a href="privacy.html">Privacy</a> ·
         <a href="terms.html">Terms</a>
       </p>
